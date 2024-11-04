@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>News</title>
 </head>
 <body>
-{% extends 'base.html' %}
-
-{% block content %}
-    <h1>Bosh sahifa</h1>
-    <p>Salom</p>
-{% endblock content %}
+    <h1>News</h1>
+    <ul>
+        {% for post in object_list %}
+        <li>
+            <h2>{{post.title}}</h2> <br>
+            {{post.text}} <br>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
